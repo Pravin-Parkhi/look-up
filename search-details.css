@@ -1,0 +1,103 @@
+.search-result-section{
+    padding: 30px;
+    margin-top: 70px;
+    background-color: #F1F1F1;
+}
+.search-result-heading{
+    text-transform: capitalize;
+    color: #014A80;
+    font-size: 46px;
+    text-align: center;
+    margin: 0px;
+}
+.search-result-sub-heading{
+    font-size: 22px;
+}
+
+/**/
+.user-details-wrapper{
+    display: flex
+}
+.user-avatar{
+    width: 70px;
+    height: 70px;
+    display: flex;
+    display: none;
+    margin-right: 20px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    background-color: #014A80;
+}
+.user-info{
+    flex: 1;
+}
+.user-icon{
+    width: 40px;
+    height: 40px;
+}
+
+/**/
+.search-details-section{
+    background-color: #F1F1F1;
+padding: 20px 20px 30px 20px;
+}
+.search-details-wrapper{
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 
+        0 4px 20px 0 rgba(0,0,0,0.19)
+}
+.search-details-heading{
+    margin: 0px;
+    color: #014A80;
+    font-size: 42px;
+    text-transform: capitalize;
+}
+.search-details-sub-heading{
+    margin: 0px;
+    color: #014A80;
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.search-details-sub-section{
+    margin-bottom: 20px;
+}
+.search-details-description{
+    margin: 10px auto;
+    font-size: 20px;
+    line-height: 28px;
+}
+.phone-number{
+    font-size: 20px;
+    color: #014A80;
+    margin: 10px auto;
+}
+
+/**/
+.search-again-section{
+    padding: 30px;
+    background-color: #014a80;
+}
+
+/*Tablet screen*/
+@media only screen and (min-width: 768px) {
+    .search-result-sub-heading{
+        text-align: center;
+    }
+    .user-avatar{
+        display: flex;
+    }
+    .person-details-wrapper{
+        margin-left: 90px;
+    }
+    .person-details-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .person-details-wrapper > .search-details-sub-section{
+        width: 48%;
+    }
+}
