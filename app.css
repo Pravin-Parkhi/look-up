@@ -9,6 +9,54 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+.field {
+  width: 100%;
+  display: flex;
+  flex-flow: column-reverse;
+}
+label, input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+
+input:focus {
+  outline: 0;
+  border-bottom: 1px solid #666;
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+input:placeholder-shown + label {
+  cursor: text;
+  max-width: 66%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transform-origin: left bottom;
+  transform: translate(20px, 45px) scale(1.5);
+}
+
+::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+/**
+* When the element is focused, remove the label transform.
+* Also, do this when the placeholder is _not_ shown, i.e. when 
+* there's something in the input at all.
+*/
+input:not(:placeholder-shown) + label,
+input:focus + label {
+  transform: translate(20px, 25px) scale(1);
+  cursor: pointer;
+}
 /*Header*/
 .app-header{
     height: 70px;
@@ -65,7 +113,7 @@ body {
 }
 .email-input{
     width: 100%;
-    padding: 20px;
+    padding: 30px 20px 10px 20px;
     outline: none;
     font-size: 20px;
     border-radius: 4px;
@@ -207,8 +255,8 @@ body {
     .search-button{
         max-width: 200px;
         margin-left: 20px;
-        margin-top: 0px;
-        padding: 18px 40p
+        margin-top: 18px;
+        padding: 18px 40px;
     }
     .bullet-points-wrapper{
         display: flex;
@@ -221,7 +269,7 @@ body {
 }
 
 /*Large screen*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1400px) {
     .header-wrapper{
         padding: 10px 0px;
     }

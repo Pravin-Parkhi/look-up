@@ -6,8 +6,11 @@ const HomeView = `
                 <span class="sub-heading-prefix">Start Here</span> <span class="sub-heading-postfix">- Look up the owner's name, photos and online profiles. See what you find!</span>
             </p>
             <div class="search-input-wrapper">
-                <input type="email" id="searchInput" placeholder="EMAIL" name="email" class="email-input">
-                <button class="search-button" onclick="handleSearchClick(); return false;">Go!</button>
+                <div class="field">
+                    <input type="email" id="searchInput" placeholder="EMAIL" name="email" class="email-input">
+                    <label for="email" id="emailLabel">EMAIL</label>
+                </div>
+                <button class="search-button" onclick="handleSearchClick();">Go!</button>
             </div>
             <p class="security-text-wrapper">
                 <img class="security-icon" src="./assets/lock.svg" alt="Security" />
@@ -82,10 +85,3 @@ const HomeView = `
         </div>
     </section>
 `
-
-function handleSearchClick(){
-    const serchInput = document.getElementById('searchInput');
-    const email = serchInput.value;
-//    onNavigate(`/search-details?email=${email}`);
-    onNavigate(`/search-details`);
-}
